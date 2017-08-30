@@ -7,28 +7,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/main.min.css">
 </head>
 <body>
 
 <header class="header" id="main">
 
 	<!-- img-animation-top -->
-	<img class="img-anim-top header__img-3" src="img/anim-1.png" alt="">
-	<img class="img-anim-top header__img-4" src="img/anim-2.svg" alt="">
-	<img class="img-anim-top header__img-5" src="img/anim-3.png" alt="">
-	<img class="img-anim-top header__img-6" src="img/anim-4.svg" alt="">
+	<img class="img-anim-top header__img-3" src="<?php echo get_template_directory_uri(); ?>/img/anim-1.png" alt="">
+	<img class="img-anim-top header__img-4" src="<?php echo get_template_directory_uri(); ?>/img/anim-2.svg" alt="">
+	<img class="img-anim-top header__img-5" src="<?php echo get_template_directory_uri(); ?>/img/anim-3.png" alt="">
+	<img class="img-anim-top header__img-6" src="<?php echo get_template_directory_uri(); ?>/img/anim-4.svg" alt="">
 	<!-- img-animation-top END-->
 
 	<div class="container" id="menu-desktop">
-
-		<!-- logo -->
-
-		<div class="logo logo_mobile">
-			<img src="img/logo.png" alt="">
-		</div>
-
-		<!-- logo END-->
 
 		<div class="hamburger">
 			<span class="hamburger__line"></span>
@@ -45,8 +37,8 @@
 
 				<!-- logo -->
 
-				<div class="logo logo_desktop">
-					<img src="img/logo.png" alt="">
+				<div class="logo">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="">
 				</div>
 
 				<!-- logo END-->
@@ -105,11 +97,11 @@
 			<!-- header-content -->
 
 			<div class="show-right header__image col-6 pull-right col-md-12 ">
-				<img class="header__img sm__img-12" src="img/macbook.svg" alt="">
+				<img class="header__img sm__img-12" src="<?php echo get_template_directory_uri(); ?>/img/macbook.svg" alt="">
 
 				<!-- img animation -->
-				<img class="img-anim header__img-1" src="img/word.svg" alt="">
-				<img class="img-anim header__img-2" src="img/pdf.svg" alt="">
+				<img class="img-anim header__img-1" src="<?php echo get_template_directory_uri(); ?>/img/word.svg" alt="">
+				<img class="img-anim header__img-2" src="<?php echo get_template_directory_uri(); ?>/img/pdf.svg" alt="">
 				<!-- img animation END-->
 			</div>
 
@@ -143,8 +135,8 @@
 		<div class="col-6 col-md-12">
 
 			<div class="begin__left">
-				<img class="sm__img-12 a-show1" src="img/deals-page.png" alt="">
-				<img class="begin__img a-show2" src="img/deals-mobile.png" alt="">
+				<img class="sm__img-12" src="<?php echo get_template_directory_uri(); ?>/img/deals-page.png" alt="">
+				<img class="begin__img" src="<?php echo get_template_directory_uri(); ?>/img/deals-mobile.png" alt="">
 			</div>
 			
 		</div>
@@ -187,13 +179,11 @@
 
 		<div class="tabs">
 
-			<div class="tabs__arrow arrow__left"><img src="img/arrow.svg" alt=""></div>
-
 			<input id="tab-1" class="tab__inp" type="radio" name="role-group" checked>
 
 			<label for="tab-1" class="tab__lbl">
 				<div class="role__image">
-					<img src="img/tab1.svg" alt="" class="role__img">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/tab1.svg" alt="" class="role__img">
 				</div>
 				<div class="role__name">Руководитель</div>
 			</label>
@@ -202,7 +192,7 @@
 
 			<label for="tab-2" class="tab__lbl">
 				<div class="role__image">
-					<img src="img/tab2.svg" alt="" class="role__img">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/tab2.svg" alt="" class="role__img">
 				</div>
 				<div class="role__name">Бухгалтер</div>
 			</label>
@@ -211,7 +201,7 @@
 
 			<label for="tab-3" class="tab__lbl">
 				<div class="role__image">
-					<img src="img/tab3.svg" alt="" class="role__img">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/tab3.svg" alt="" class="role__img">
 				</div>
 				<div class="role__name">Фин. специалист</div>
 			</label>
@@ -220,7 +210,7 @@
 
 			<label for="tab-4" class="tab__lbl">
 				<div class="role__image">
-					<img src="img/tab4.svg" alt="" class="role__img">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/tab4.svg" alt="" class="role__img">
 				</div>
 				<div class="role__name">ИТ-специалист</div>
 			</label>
@@ -229,12 +219,10 @@
 
 			<label for="tab-5" class="tab__lbl">
 				<div class="role__image">
-					<img src="img/tab5.svg" alt="" class="role__img">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/tab5.svg" alt="" class="role__img">
 				</div>
 				<div class="role__name">Менеджер</div>
 			</label>
-
-			<div class="tabs__arrow arrow__right"><img src="img/arrow.svg" alt=""></div>
 
 			<!-- tab-text -->
 
@@ -347,19 +335,19 @@
 			</div>
 
 			<ul class="range__scale-list xs-hide">
-				<li class="range__scale-item">20</li>
+				<li class="range__scale-item"><span class="helper">20</span></li>
 				<li class="range__scale-item">100</li>
 				<li class="range__scale-item">500</li>
 				<li class="range__scale-item">1000</li>
 				<li class="range__scale-item">2000</li>
 				<li class="range__scale-item">5000</li>
 				<li class="range__scale-item">11000</li>
-				<li class="range__scale-item">40000</li>
+				<li class="range__scale-item"><span class="helper">40000</span></li>
 			 </ul>
 		</div>
 
 		<div class="range__right col-4 col-md-12">
-			<img src="img/porky.svg" alt="" class="range__img">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/porky.svg" alt="" class="range__img xs-img-12">
 			<div class="range__button">
 				<a href="" class="btn btn_primary btn_range">Узнать больше</a>
 			</div>
@@ -374,14 +362,14 @@
 		<h2 class="title2">Работать с документами онлайн удобно</h2>
 
 		<div class="documents__line">
-			<img src="img/line.svg" alt="">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/line.svg" alt="">
 		</div>
 
 		<ul class="documents__list">
 
 			<li class="documents__item">
 				<div class="documents__circle">
-					<img class="documents__img" src="img/doc1.svg" alt="">
+					<img class="documents__img" src="<?php echo get_template_directory_uri(); ?>/img/doc1.svg" alt="">
 				</div>
 
 				<div class="documents__txt">
@@ -392,7 +380,7 @@
 
 			<li class="documents__item">
 				<div class="documents__circle">
-					<img class="documents__img" src="img/doc2.svg" alt="">
+					<img class="documents__img" src="<?php echo get_template_directory_uri(); ?>/img/doc2.svg" alt="">
 				</div>
 
 				<div class="documents__txt">
@@ -403,7 +391,7 @@
 
 			<li class="documents__item">
 				<div class="documents__circle">
-					<img class="documents__img" src="img/doc3.svg" alt="">
+					<img class="documents__img" src="<?php echo get_template_directory_uri(); ?>/img/doc3.svg" alt="">
 				</div>
 
 				<div class="documents__txt">
@@ -414,7 +402,7 @@
 
 			<li class="documents__item">
 				<div class="documents__circle">
-					<img class="documents__img" src="img/doc4.svg" alt="">
+					<img class="documents__img" src="<?php echo get_template_directory_uri(); ?>/img/doc4.svg" alt="">
 				</div>
 
 				<div class="documents__txt">
@@ -425,7 +413,7 @@
 
 			<li class="documents__item">
 				<div class="documents__circle">
-					<img class="documents__img" src="img/doc5.svg" alt="">
+					<img class="documents__img" src="<?php echo get_template_directory_uri(); ?>/img/doc5.svg" alt="">
 				</div>
 
 				<div class="documents__txt">
@@ -468,7 +456,7 @@
 			<li class="economy__item col-3 col-md-12">
 
 				<div class="economy__inner">
-					<img class="economy__img" src="img/economy1.svg" alt="">
+					<img class="economy__img" src="<?php echo get_template_directory_uri(); ?>/img/economy1.svg" alt="">
 					<div class="economy__txt">
 						<strong>Увеличивайте </strong>
 						 процент согласованных вовремя документов.
@@ -480,7 +468,7 @@
 			<li class="economy__item col-3 col-md-12">
 
 				<div class="economy__inner">
-					<img class="economy__img" src="img/economy2.svg" alt="">
+					<img class="economy__img" src="<?php echo get_template_directory_uri(); ?>/img/economy2.svg" alt="">
 					<div class="economy__txt">
 						<strong>Сократите </strong>
 						продолжительность подготовки и согласования документов в разы.
@@ -492,7 +480,7 @@
 			<li class="economy__item col-3 col-md-12">
 
 				<div class="economy__inner">
-					<img class="economy__img" src="img/economy3.svg" alt="">
+					<img class="economy__img" src="<?php echo get_template_directory_uri(); ?>/img/economy3.svg" alt="">
 					<div class="economy__txt">
 						<strong>Экономьте </strong>
 						на административных расходах (печать, доставка документов)
@@ -504,7 +492,7 @@
 			<li class="economy__item col-3 col-md-12">
 
 				<div class="economy__inner">
-					<img class="economy__img" src="img/economy4.svg" alt="">
+					<img class="economy__img" src="<?php echo get_template_directory_uri(); ?>/img/economy4.svg" alt="">
 					<div class="economy__txt">
 						<strong>Обеспечьте </strong>
 						доступ к документам 24/7.
@@ -516,7 +504,7 @@
 			<li class="economy__item col-3 col-md-12">
 
 				<div class="economy__inner">
-					<img class="economy__img" src="img/economy5.svg" alt="">
+					<img class="economy__img" src="<?php echo get_template_directory_uri(); ?>/img/economy5.svg" alt="">
 					<div class="economy__txt">
 						<strong>Уменьшите </strong>
 						время поиска документов.
@@ -539,19 +527,19 @@
 			<ul class="trust__list">
 
 				<li class="trust__item">
-					<img src="img/inbase.png" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/inbase.png" alt="">
 				</li>
 				<li class="trust__item">
-					<img src="img/i-qusion.svg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/i-qusion.svg" alt="">
 				</li>
 				<li class="trust__item">
-					<img src="img/intecracy.svg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/intecracy.svg" alt="">
 				</li>
 				<li class="trust__item">
-					<img src="img/softengi.svg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/softengi.svg" alt="">
 				</li>
 				<li class="trust__item">
-					<img src="img/kyivstar.svg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/kyivstar.svg" alt="">
 				</li>	
 					
 			</ul>
@@ -637,7 +625,7 @@
 	<div class="container clearfix">
 
 		<div class="footer__logo col-md-12">
-			<img src="img/logo-footer.png" alt="">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/logo-footer.png" alt="">
 		</div>
 
 		<ul class="social__list col-md-12">
@@ -753,6 +741,6 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-<script src="scripts/main.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/scripts/main.js"></script>
 </body>
 </html>

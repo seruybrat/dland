@@ -107,18 +107,6 @@ $(document).ready(function () {
         else i++;
     }, 3000);
 
-    // Tab slider
-
-    $('.arrow__left').click( function() {
-
-        $('.tab__inp:checked').prevAll('.tab__inp').first().prop("checked", true);
-    });
-
-    $('.arrow__right').click( function() {
-
-        $('.tab__inp:checked').nextAll('.tab__inp').first().prop("checked", true);
-    });
-
 });
 
 $(window).scroll(function() { 
@@ -128,15 +116,12 @@ $(window).scroll(function() {
     var objectPosition = objectSelect.offset().top;
 
     if (scroll > objectPosition - 500) {
-        $(".a-show1").animate({
-            left: '0',
-            opacity: '1'
+        $(".begin__left").animate({
+            left: '0'
         }, 1000);
-
-        $(".a-show2").animate({
-            right: '18%',
-            opacity: '1'
-        }, 1500);
+        $(".begin__right").animate({
+            left: '0'
+        }, 1150);
 
          $(window).unbind('scroll');
     } 

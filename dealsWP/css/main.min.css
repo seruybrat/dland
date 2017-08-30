@@ -152,9 +152,7 @@ a {
     right: 100px; }
 
 .nav {
-  position: relative;
-  padding-top: 28px;
-  z-index: 112; }
+  padding-top: 28px; }
   .nav__left {
     float: left; }
   .nav__right {
@@ -165,8 +163,6 @@ a {
 .logo {
   display: inline-block;
   margin-right: 50px; }
-  .logo_mobile {
-    display: none; }
 
 .menu {
   display: inline-block;
@@ -224,16 +220,18 @@ a {
         color: #fff; }
   .begin__count {
     position: absolute;
-    top: 50%;
+    top: -25px;
     left: -55px;
     color: rgba(255, 255, 255, 0.15);
     font-size: 4.375em;
-    font-weight: bold;
-    transform: translateY(-50%); }
+    font-weight: bold; }
   .begin__right {
+    position: relative;
+    left: -10000px;
     padding: 60px 0 0 60px; }
   .begin__left {
-    position: relative; }
+    position: relative;
+    left: -10000px; }
   .begin__img {
     position: absolute;
     right: 18%;
@@ -245,8 +243,6 @@ a {
 .tabs {
   padding: 120px 0 0;
   text-align: center; }
-  .tabs__arrow {
-    display: none; }
 
 .tab__inp {
   display: none; }
@@ -366,10 +362,19 @@ a {
       width: 1px;
       height: 13px;
       background-color: rgba(0, 0, 0, 0.1); }
+    .range__scale-item:first-child {
+      text-align: left; }
+      .range__scale-item:first-child .helper {
+        margin-left: -6px; }
+    .range__scale-item:last-child {
+      text-align: right; }
+      .range__scale-item:last-child .helper {
+        margin-right: -16px; }
     .range__scale-item:first-child:after {
-      left: 35%; }
+      left: 1px; }
     .range__scale-item:last-child:after {
-      left: 65%; }
+      left: auto;
+      right: -1px; }
 
 .output {
   padding: 42px 0;
@@ -642,17 +647,14 @@ a {
   right: 0;
   bottom: 0;
   width: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 999; }
   .modal__inner {
-    margin-bottom: 50px;
     position: absolute;
-    top: 100px;
+    top: 30%;
     left: 50%;
     width: 35%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     background-color: #fff;
     border-radius: 5px; }
   .modal__header {
@@ -742,12 +744,10 @@ a {
   z-index: 333; }
   #menu-desktop.open .nav {
     display: block; }
-  #menu-desktop.open .menu__item, #menu-desktop.open .lang, #menu-desktop.open .menu {
+  #menu-desktop.open .menu__item, #menu-desktop.open .lang, #menu-desktop.open .logo {
     display: block;
     margin: 0;
     margin: 25px 0; }
-  #menu-desktop.open .menu {
-    margin-top: 70px; }
   #menu-desktop.open .nav__right, #menu-desktop.open .nav__left {
     text-align: center;
     float: none; }
@@ -766,8 +766,8 @@ a {
 
 .img-anim {
   position: absolute;
-  top: -300%;
-  opacity: 0; }
+  opacity: 0;
+  top: -300%; }
   .img-anim-top {
     position: absolute; }
 
@@ -797,13 +797,9 @@ a {
 
 @keyframes a-header1 {
   0% {
-    opacity: 0;
+    opacity: 1;
     top: -300%;
     left: 0%; }
-  3% {
-    top: -300%;
-    left: 0%;
-    opacity: 1; }
   80% {
     opacity: 1; }
   100% {
@@ -813,13 +809,9 @@ a {
 
 @keyframes a-header2 {
   0% {
-    opacity: 0;
+    opacity: 1;
     top: -300%;
     left: 120%; }
-  5% {
-    top: -300%;
-    left: 120%;
-    opacity: 1; }
   80% {
     opacity: 1; }
   100% {
@@ -829,30 +821,17 @@ a {
 
 .show-left {
   position: relative;
-  left: -50px;
-  opacity: 0;
+  left: -1000px;
   transition: all 1s ease; }
   .show-left.active {
-    left: 0;
-    opacity: 1; }
+    left: 0; }
 
 .show-right {
   position: relative;
-  right: -50px;
-  opacity: 0;
+  right: -1000px;
   transition: all 2s ease; }
   .show-right.active {
-    right: 0;
-    opacity: 1; }
-
-.a-show1 {
-  position: relative;
-  left: -50px;
-  opacity: 0; }
-
-.a-show2 {
-  right: 10%;
-  opacity: 0; }
+    right: 0; }
 
 @media only screen and (max-width: 1264px) {
   .container {
@@ -870,8 +849,7 @@ a {
     padding: 20px 0;
     text-align: center; }
   .tab__lbl {
-    margin-bottom: 35px;
-    width: 180px; }
+    margin-bottom: 35px; }
   .range__left {
     padding: 0 15px; }
   .workflow {
@@ -886,55 +864,7 @@ a {
   .modal__inner {
     width: 320px;
     top: 50px;
-    transform: translate(-50%, 0); }
-  .modal__header {
-    padding-top: 35px; }
-  .modal__close {
-    font-size: 2.4em; }
-  #menu-desktop.open .logo {
-    margin-bottom: 0; }
-  .lang {
-    margin-top: 0 !important; }
-  .menu {
-    padding-top: 0; }
-  .nav__right .btn {
-    width: 100%;
-    padding: 11px 24px;
-    font-size: 0.875em;
-    margin-bottom: 15px; }
-  .logo_desktop {
-    display: none; }
-  .logo_mobile {
-    margin: 17px 15px 0 0;
-    display: block;
-    width: 148px;
-    float: left;
-    z-index: 444; } }
-
-@media only screen and (max-width: 970px) {
-  .tabs {
-    position: relative;
-    padding-top: 230px; }
-  .tabs__arrow {
-    position: absolute;
-    display: block;
-    font-size: 2em;
-    cursor: pointer; }
-  .arrow__left {
-    top: 80px;
-    left: 20%; }
-  .arrow__right {
-    top: 67px;
-    right: 20%;
-    transform: rotate(180deg); }
-  .tab__lbl {
-    opacity: 0;
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%); }
-  .tab__inp:checked + .tab__lbl {
-    opacity: 1; } }
+    transform: translate(-50%, 0); } }
 
 @media only screen and (max-width: 700px) {
   .col-sm-12 {
@@ -952,6 +882,7 @@ a {
     padding: 30px 0 5px;
     margin-top: 0; }
   .tabs {
+    padding: 50px 0 0;
     text-align: center; }
   .documents__item {
     width: 100%; }
@@ -971,18 +902,7 @@ a {
   .range__scale-list {
     padding: 8px 8px 8px 0px; }
   .output__title-list {
-    padding: 8px 0; }
-  .btn_accent, .btn_shadow, .btn_range, .btn_primary {
-    padding: 18px 30px;
-    font-size: 1em; }
-  .economy__txt, .faq__txt {
-    text-align: left; }
-  .header__img {
-    padding: 0 20px; }
-  .output {
-    padding: 10px 0; }
-  .range__bar {
-    padding: 0 25px; } }
+    padding: 8px 0; } }
 
 @media only screen and (max-width: 500px) {
   .xs-img-12 {
@@ -1012,16 +932,10 @@ a {
   .txt-left-sm {
     padding-left: 0; }
   body {
-    font-size: 14px; }
+    font-size: 12px; }
   .title {
     margin-top: 0; }
   .header__text {
     padding-top: 0; }
   .header__txt {
-    margin: 0 0 15px; }
-  .arrow__left {
-    left: 10%; }
-  .arrow__right {
-    right: 10%; }
-  .range__img {
-    display: none; } }
+    margin: 0 0 15px; } }

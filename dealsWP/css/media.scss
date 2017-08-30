@@ -26,7 +26,6 @@
 
     .tab__lbl {
     	margin-bottom: 35px;
-    	width: 180px;
     }
 
     .range__left {
@@ -56,93 +55,7 @@
     	transform: translate(-50%, 0);
     }
 
-    .modal__header {
-    	padding-top: 35px;
-    }
-
-    .modal__close {
-    	font-size: 2.4em;
-    }
-	
-	#menu-desktop.open {
-		.logo {
-			margin-bottom: 0;
-		}
-	}
-
-	.lang {
-		margin-top: 0 !important;
-	}
-
-	.menu {
-		padding-top: 0;
-	}
-
-    .nav__right {
-    	.btn {
-    		width: 100%;
-    		padding: 11px 24px;
-    		font-size: 0.875em;
-    		margin-bottom: 15px; 
-    	}
-    }
-
-    .logo {
-    	&_desktop {
-	    	display: none;
-	    }
-
-	    &_mobile {
-	    	margin: 17px 15px 0 0;
-	    	display: block;
-	    	width: 148px;
-	    	float: left;
-	    	z-index: 444;
-	    }
-    }
-
 }
-
-@media only screen and (max-width: 970px) {
-
-	.tabs {
-		position: relative;
-		padding-top: 230px;
-	}
-	.tabs__arrow {
-		position: absolute;
-		display: block;
-		font-size: 2em;
-		cursor: pointer;
-	}
-
-	.arrow {
-		&__left{
-			top: 80px;
-			left: 20%;
-		}
-
-		&__right {
-			top: 67px;
-			right: 20%;
-			transform: rotate(180deg);
-		}
-	}
-
-	.tab__lbl {
-		opacity: 0;
-		position: absolute;
-		top: 20px;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-
-	.tab__inp:checked + .tab__lbl {
-		opacity: 1;
-	}
-
-}
-
 
 @media only screen and (max-width: $sm) {
 
@@ -171,6 +84,7 @@
 	}
 
 	.tabs {
+		padding: 50px 0 0;
 		text-align: center;
 	}
 
@@ -205,27 +119,6 @@
 
 	.output__title-list {
 		padding: 8px 0;
-	}
-
-	.btn_accent, .btn_shadow, .btn_range, .btn_primary {
-		padding: 18px 30px;
-		font-size: 1em;
-	}
-
-	.economy__txt, .faq__txt {
-		text-align: left;
-	}
-
-	.header__img {
-		padding: 0 20px;
-	}
-
-	.output {
-		padding: 10px 0;
-	}
-
-	.range__bar {
-		padding: 0 25px;
 	}
 }
 
@@ -280,7 +173,7 @@
 	}
 
 	body {
-		font-size: 14px;
+		font-size: 12px;
 	}
 
 	.title {
@@ -294,19 +187,4 @@
 	.header__txt {
 		margin: 0 0 15px;
 	}
-
-	.arrow {
-		&__left{
-			left: 10%;
-		}
-
-		&__right {
-			right: 10%;
-		}
-	}
-
-	.range__img {
-		display: none;
-	}
-
 }

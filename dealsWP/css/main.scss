@@ -217,9 +217,7 @@ a {
 // Navigation
 
 .nav {
-	position: relative;
 	padding-top: 28px;
-	z-index: 112;
 
 	&__left {
 		float: left;
@@ -235,9 +233,6 @@ a {
 .logo {
 	display: inline-block;
 	margin-right: 50px;
-	&_mobile {
-		display: none;
-	}
 }
 
 .menu {
@@ -325,20 +320,22 @@ a {
 
 	&__count {
 		position: absolute;
-		top: 50%;
+		top: -25px;
 		left: -55px;
 		color: rgba(255, 255, 255, 0.15);
 		font-size: 4.375em;
 		font-weight: bold;
-		transform: translateY(-50%);
 	}
 
 	&__right {
+		position: relative;
+		left: -10000px;
 		padding: $begin-right-padd;
 	}
 
 	&__left {
 		position: relative;
+		left: -10000px;
 	}
 
 	&__img {
@@ -357,10 +354,6 @@ a {
 .tabs {
 	padding: $tabs-padd;
 	text-align: center;
-
-	&__arrow {
-		display: none;
-	}
 }
 
 .tab__inp {
@@ -531,14 +524,28 @@ a {
 			background-color: rgba(0, 0, 0, 0.1);
 		}
 
+		&:first-child {
+			text-align: left;
+			.helper {
+				margin-left: -6px;
+			}
+		}
+
+		&:last-child {
+			text-align: right;
+			.helper {
+				margin-right: -16px;
+			}
+		}
+
 		&:first-child:after {
-			left: 35%;
+			left: 1px;
 		}
 
 		&:last-child:after {
-			left: 65%;
+			left: auto;
+			right: -1px;
 		}
-
 	}
 }
 
@@ -948,18 +955,15 @@ a {
 	right: 0;
 	bottom: 0;
 	width: 100%;
-	overflow-x: hidden;
-    overflow-y: auto;
 	background-color: rgba(0,0,0, .75);
 	z-index: 999;
 
 	&__inner {
-		margin-bottom: 50px;
 		position: absolute;
-		top: 100px;
+		top: 30%;
 		left: 50%;
 		width: 35%;
-		transform: translateX(-50%);
+		transform: translate(-50%,-50%);
 		background-color: #fff;
 		border-radius: 5px;
 	}
@@ -1091,14 +1095,10 @@ a {
 			display: block;
 		}
 
-		.menu__item, .lang, .menu {
+		.menu__item, .lang, .logo {
 			display: block;
 			margin: 0;
 			margin: 25px 0;
-		}
-
-		.menu {
-			margin-top: 70px;
 		}
 
 		.nav__right, .nav__left {
@@ -1134,9 +1134,8 @@ a {
 
 .img-anim {
 	position: absolute;
-	top: -300%;
 	opacity: 0;
-	
+	top: -300%;
 
 	&-top {
 		position: absolute;
@@ -1178,15 +1177,13 @@ a {
 }
 
 @keyframes a-header1 {
-  0%   { opacity: 0; top: -300%; left: 0%;}
-  3%   { top: -300%; left: 0%; opacity: 1;}
+  0%   { opacity: 1; top: -300%; left: 0%;}
   80%   { opacity: 1;}
   100% { opacity: 0; top: 30%; left: 40%;}
 }
 
 @keyframes a-header2 {
-  0%   { opacity: 0; top: -300%; left: 120%;}
-  5%   { top: -300%; left: 120%; opacity: 1;}
+  0%   { opacity: 1; top: -300%; left: 120%;}
   80%   { opacity: 1;}
   100% { opacity: 0; top: 30%; left: 40%;}
 }
@@ -1195,37 +1192,22 @@ a {
 
 .show-left {
 	position: relative;
-	left: -50px ;
-	opacity: 0;
+	left: -1000px ;
 	transition: all 1s ease;
 
 	&.active {
 		left: 0;
-		opacity: 1;
 	}
 }
 
 .show-right {
 	position: relative;
-	right: -50px ;
-	opacity: 0;
+	right: -1000px ;
 	transition: all 2s ease;
 
 	&.active {
 		right: 0;
-		opacity: 1;
 	}
-}
-
-.a-show1 {
-	position: relative;
-	left: -50px;
-	opacity: 0;
-}
-
-.a-show2 {
-	right: 10%;
-	opacity: 0;
 }
 
 @import "media";
